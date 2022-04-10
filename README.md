@@ -42,3 +42,15 @@ data "aws_instance" "my-existing-vm" {
  ```
  **resource adress** -> aws_instance.web
   **resource adress** -> data.aws_instance.my-existing-vm
+  
+
+## terraform state 
+
+Terraform state helps map real world resources (vm instances, clusters,vpns, etc.. ) to terraform resources, 
+by default it's stored in a local file **terraform.tfstate**. 
+Before updating the infrastructure terraform refreshes this state file  
+
+### terraform state command 
+
+-  **list**  
+
