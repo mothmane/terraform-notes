@@ -60,3 +60,12 @@ terraform state [COMMAND]
 -  **rm**  remove a resource from the state file 
 -  **show** show details of resource tracked in state file
 
+### state storage 
+
+By default, terraform stores state file locally on your system, this default behavior seems fine for individuals or testing pupose, 
+but once you want to use terraform withing a team, in production grade apps, your state should be saved in a safer place, accessible by distributed teams. the good new is that terraform can be configured to be stored in remote locations sush as AWS S3 , or Google storage.
+
+Terraform has a locking features that prevent terraform state from beeing updated simultanously, by two difference member.
+
+Enables sharings ouptut values with other terraform configuration or code 
+
