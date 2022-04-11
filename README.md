@@ -46,11 +46,17 @@ data "aws_instance" "my-existing-vm" {
 
 ## terraform state 
 
-Terraform state helps map real world resources (vm instances, clusters,vpns, etc.. ) to terraform resources, 
-by default it's stored in a local file **terraform.tfstate**. 
-Before updating the infrastructure terraform refreshes this state file  
+ - Terraform state helps map real world resources (vm instances, clusters,vpns, etc.. ) to terraform resources, 
+ - By default it's stored in a local file **terraform.tfstate**. 
+ - Before updating the infrastructure terraform refreshes this state file.
+ - Resource dependency metada are also tracked int the file **terraform.tfstate**
+ - caches resource attribute for subsequent use (improve performance)
 
 ### terraform state command 
 
--  **list**  
+terraform state [COMMAND]
+
+-  **list**  list all resource tracked by the stazte file 
+-  **rm**  remove a resource from the state file 
+-  **show** show details of resource tracked in state file
 
